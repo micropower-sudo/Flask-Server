@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="16">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Custom Web Scraper – Demo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body{
+  margin:0;
+  background:#000;
+  color:#0f0;
+  font-family:'Share Tech Mono', monospace;
+}
+
+header{
+  font-size:2.3em;
+  text-align:center;
+  padding:20px;
+  position:relative;
+}
+
+#clock{
+  position:absolute;
+  top:22px;
+  right:30px;
+  font-size:0.45em;
+}
+
+.container{
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:35px;
+  padding:40px;
+}
+
+.card{
+  background:#111;
+  border:2px solid #0f0;
+  border-radius:25px;
+  padding:30px;
+}
+
+.system-card{
+  padding-left:120px;
+  padding-top:70px;
+  font-size:1.35em;
+  position:relative;
+}
+
+.system-card h2{
+  margin-bottom:15px;
+}
+
+.flask-icon{
+  position:absolute;
+  top:-35px;
+  left:-35px;
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  background:#000;
+  border:3px solid #0f0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:pulse 2.5s infinite;
+}
+
+.flask-icon svg{
+  width:50px;
+  height:50px;
+  fill:#0f0;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(0,255,0,.6)}
+  70%{box-shadow:0 0 0 18px rgba(0,255,0,0)}
+  100%{box-shadow:0 0 0 0 rgba(0,255,0,0)}
+}
+
+.server-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+button{
+  background:#000;
+  border:2px solid #0f0;
+  color:#0f0;
+  padding:6px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-family:'Share Tech Mono';
+}
+
+canvas{
+  width:100%!important;
+  height:360px!important;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+Custom Web Scraper
+<div id="clock"></div>
+</header>
+
+<div class="container">
+
+<!-- System Info -->
+<div class="card system-card">
+  <div class="flask-icon">
+    <svg viewBox="0 0 64 64">
+      <path d="M24 2h16v4l-4 6v22l14 22H14l14-22V12l-4-6z"/>
+    </svg>
+  </div>
+  <h2>System Info</h2>
+  CPU: 42 %<br>
+  RAM: 68 %<br>
+  Disk: 51 %<br>
+  Power: 8.4 W
+</div>
+
+<!-- Chart -->
+<div class="card">
+  <h2>Performance History</h2>
+  <canvas id="chart"></canvas>
+</div>
+
+<!-- Services -->
+<div class="card">
+  <h2>Services</h2>
+
+  <div class="server-row">
+    <div>
+      Service A<br>
+      your IP:8000
+    </div>
+    <button>Open</button>
+  </div>
+
+  <div class="server-row">
+    <div>
+      Service B<br>
+      your IP:8080
+    </div>
+    <button>Open</button>
+  </div>
+
+  <div class="server-row">
+    <div>
+      Service C<br>
+      your IP:8443
+    </div>
+    <button>Open</button>
+  </div>
+</div>
+
+</div>
+
+<script>
+// Fake chart data (demo only)
+const labels = Array.from({length: 30}, (_, i) => i);
+
+new Chart(document.getElementById('chart'), {
+  type: 'line',
+  data: {
+    labels,
+    datasets: [
+      {
+        label: 'CPU %',
+        data: labels.map(() => 30 + Math.random() * 40),
+        borderColor: 'red',
+        tension: 0.3,
+        pointRadius: 3
+      },
+      {
+        label: 'RAM %',
+        data: labels.map(() => 40 + Math.random() * 30),
+        borderColor: 'blue',
+        tension: 0.3,
+        pointRadius: 3
+      },
+      {
+        label: 'Power W',
+        data: labels.map(() => 7 + Math.random() * 3),
+        borderColor: 'yellow',
+        tension: 0.3,
+        pointRadius: 3
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false
+  }
+});
+
+// Clock
+setInterval(() => {
+  document.getElementById("clock").innerText =
+    new Date().toLocaleTimeString();
+}, 1000);
+</script>
+
+</body>
+</html>
