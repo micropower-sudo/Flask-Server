@@ -1,4 +1,5 @@
 ```text
+```
 
  /$$$$$$$                            /$$                              
 | $$__  $$                          | $$                              
@@ -31,10 +32,10 @@ A Linux system (Ubuntu, Debian, Arch, etc.)
 
 Check your Python version:
 
-```
+``
 python3 --version
-```
 
+```
 If Python is missing:
 
 sudo apt install python3 python3-pip -y
