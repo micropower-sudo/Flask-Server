@@ -32,9 +32,9 @@ A Linux system (Ubuntu, Debian, Arch, etc.)
 
 Check your Python version:
 
-```md
+```
 python3 --version
-```bash
+```
 
 If Python is missing:
 
