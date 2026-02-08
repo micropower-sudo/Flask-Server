@@ -30,11 +30,10 @@ pip (Python package manager)
 A Linux system (Ubuntu, Debian, Arch, etc.)
 
 Check your Python version:
-```md
-Copy
+
 ```bash
 python3 --version
-
+```bash
 
 If Python is missing:
 
