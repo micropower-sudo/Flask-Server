@@ -31,7 +31,7 @@ A Linux system (Ubuntu, Debian, Arch, etc.)
 
 Check your Python version:
 
-```htm
+```
 python3 --version
 ```
 
