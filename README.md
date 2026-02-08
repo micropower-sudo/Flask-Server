@@ -31,9 +31,9 @@ A Linux system (Ubuntu, Debian, Arch, etc.)
 
 Check your Python version:
 
-```bash
+```htm
 python3 --version
-```bash
+```
 
 If Python is missing:
 
