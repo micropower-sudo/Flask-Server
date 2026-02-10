@@ -9,7 +9,7 @@
 | $$  \ $$| $$_____/ /$$__  $$| $$  | $$      | $$ | $$ | $$| $$_____/
 | $$  | $$|  $$$$$$$|  $$$$$$$|  $$$$$$$      | $$ | $$ | $$|  $$$$$$$
 |__/  |__/ \_______/ \_______/ \_______/      |__/ |__/ |__/ \_______/
-                                                                      
+                                                                     
                                                                       
                                                                       
 # Flask Server
@@ -44,8 +44,9 @@ sudo apt install python3 python3-pip -y
 
 Clone the project from GitHub and move into the project directory:
 
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/micropower-sudo/Flask-Server/blob/main/Flask%20Server.py
+
+cd Flask-Server
 
 3️⃣ (Optional but Recommended) Create a Virtual Environment
 
