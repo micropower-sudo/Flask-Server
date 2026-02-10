@@ -44,7 +44,7 @@ sudo apt install python3 python3-pip -y
 
 Clone the project from GitHub and move into the project directory:
 
-git clone https://github.com/micropower-sudo/Flask-Server/blob/main/Flask%20Server.py
+git clone https://github.com/micropower-sudo/Flask-Server.git
 
 cd Flask-Server
 
